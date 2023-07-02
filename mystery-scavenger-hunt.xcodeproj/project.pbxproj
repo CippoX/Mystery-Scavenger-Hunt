@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A520CEF92A50D06A0056F8D5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A520CEF82A50D06A0056F8D5 /* main.cpp */; };
+		A520CF012A50D4130056F8D5 /* permutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A520CEFF2A50D4130056F8D5 /* permutation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		A520CEF52A50D06A0056F8D5 /* mystery-scavenger-hunt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mystery-scavenger-hunt"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A520CEF82A50D06A0056F8D5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A520CEFF2A50D4130056F8D5 /* permutation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = permutation.cpp; sourceTree = "<group>"; };
+		A520CF002A50D4130056F8D5 /* permutation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = permutation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				A520CEF82A50D06A0056F8D5 /* main.cpp */,
+				A520CEFF2A50D4130056F8D5 /* permutation.cpp */,
+				A520CF002A50D4130056F8D5 /* permutation.hpp */,
 			);
 			path = "mystery-scavenger-hunt";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A520CF012A50D4130056F8D5 /* permutation.cpp in Sources */,
 				A520CEF92A50D06A0056F8D5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
