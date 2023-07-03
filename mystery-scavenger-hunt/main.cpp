@@ -15,8 +15,14 @@
 
 #include <iostream>
 #include "permutation.hpp"
+#include "graph_walk.hpp"
 
 using std::vector;
+using std::pair;
+
+bool sortbysec(const pair<vector<int>, int> &a, const pair<vector<int>, int> &b) {
+    return (a.second < b.second);
+}
 
 int main(int argc, const char * argv[]) {
   
@@ -24,21 +30,31 @@ int main(int argc, const char * argv[]) {
   // that the graph must be completly connected
   vector<vector<int>> graph =
   {
-    {0,1,2,3,4},
-    {2,3,4,5,6},
-    {4,5,6,7,8},
-    {2,3,4,5,6},
-    {3,4,5,6,7},
+    {0,1,5,3,0},
+    {2,0,4,5,3},
+    {4,2,0,7,9},
+    {2,3,8,0,9},
+    {1,4,2,6,0},
   };
 
   vector<vector<int>> res = printPermutations(graph.size());
+  vector<pair<vector<int>, int>> res2 = calculateAllGraphPath(graph, res);
   
-  for(vector<int> v : res){
-    for(int i : v)
+  for(pair<vector<int>, int> p : res2){
+    for(int i : p.first)
       std::cout<<i;
-    std::cout<<std::endl;
+    std::cout<<" | "<<p.second<<std::endl;
   }
   
-  std::cout << "Hello, World!\n";
+  std::cout<<"-------------"<<std::endl;
+  
+  sort(res2.begin(), res2.end(), sortbysec);
+  
+  for(pair<vector<int>, int> p : res2){
+    for(int i : p.first)
+      std::cout<<i;
+    std::cout<<" | "<<p.second<<std::endl;
+  }
+  
   return 0;
 }
