@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
     {1,4,2,6,0},
   };
 
-  vector<vector<int>> res = printPermutations(graph.size());
+  vector<vector<int>> res = printPermutations(int(graph.size()));
   vector<pair<vector<int>, int>> res2 = calculateAllGraphPath(graph, res);
   
   for(pair<vector<int>, int> p : res2){
